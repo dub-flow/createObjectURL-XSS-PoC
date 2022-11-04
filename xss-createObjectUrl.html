@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script>				
+            url = "http://127.0.0.1:5000/blob-string";
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", url, true);
+            xhr.responseType = 'blob';
+
+            xhr.onload = function(e) {
+                if (this.status == 200) {
+                    var downloadURL = URL.createObjectURL(xhr.response);
+                    var a = document.createElement('a');
+                    document.body.appendChild(a);
+                    a.href = downloadURL;
+                    a.download = true;
+                    a.click();
+                }
+            };
+              
+            xhr.send();
+        </script>
+    </body>
+</html>
