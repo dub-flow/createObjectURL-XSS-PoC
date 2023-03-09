@@ -12,7 +12,7 @@
                     var a = document.createElement('a');
                     document.body.appendChild(a);
                     a.href = downloadURL;
-                    //a.download = true; // if this is commented, it pops the alert
+                    a.download = true; // It needs `a.download = true` to enforce the download. Without this line, the alert would trigger
                     a.click();
                 }
             };

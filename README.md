@@ -1,6 +1,8 @@
 # createObjectURL-XSS-Test
 Testing how to do XSS with `createObjectURL()`. To test it yourself, you simply have to install and run the backend, and then open `xss-createObjectUrl.html`, and an alert will be popped.
 
+In order to prevent `XSS` to happen, `a.download = true;` must be set!
+
 # How to Install the Backend
 - Simply run `pipenv shell` followed by `pipenv install`
 
